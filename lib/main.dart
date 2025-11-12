@@ -32,7 +32,22 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 
 void _addWord() {
-
+  showModalBottomSheet<void>(
+            context: context,
+            builder: (BuildContext context) {
+              return const SizedBox(
+                height: 400,
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text('Add words here'),
+                    ],
+                  ),
+                ),
+              );
+            },
+          );
 }
 
   @override
